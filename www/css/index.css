@@ -163,7 +163,7 @@ h1 {
 
 .menu
 {
-	position: absolute;
+	position: fixed;
 	left: 0;
 	bottom: 0;
 	width: 100%;
@@ -196,4 +196,26 @@ h1 {
 .menu ul li a:hover
 {
 	background-color: #0f0;
+}
+
+#mapimage
+{
+	background-image: url(../img/map.png);
+	width: 1152px;
+	height: 648px;
+}
+
+#scrollmap
+{
+	position: fixed;
+	overflow-x: scroll;
+	overflow-y: scroll;
+	height: 80%;
+	width: 80%;
+}
+
+#map
+{
+	height: 100%;
+	width: 100%;
 }

@@ -31,13 +31,47 @@
         <title>Hello World</title>
     </head>
     <body>
+	
+		<div data-role="page" id="main">
+			<div data-role="content">
+				<p>Main</p>
+			</div>
+		</div>
+		
+		<div data-role="page" id="map">
+			<div data-role="content">
+				<p onclick="$('#activity').toggle(400)">map</p>
+				<div id="activity" style="display: none; position: absolute; left: 0px; top: 0px"><p>Activity</p></div>
+				<div id="scrollmap">
+					<div id="mapimage"></div>
+				</div>
+			</div>
+		</div>
+		
+		<div data-role="page" id="info">
+			<div data-role="content">
+				<p>info</p>
+			</div>
+		</div>
+		
+		<div data-role="page" id="score">
+			<div data-role="content">
+				<p>score</p>
+			</div>
+		</div>
+		
+		<div data-role="page" id="qr">
+			<div data-role="content">
+				<p>qr</p>
+			</div>
+		</div>
 		
 		<div id="menu" class="menu">
 			<ul>
-				<li><a href="#">Map</a></li>
-				<li><a href="#">Info</a></li>
-				<li><a href="#">Score</a></li>
-				<li><a href="#">QR</a></li>
+				<li><a href="#map">Map</a></li>
+				<li><a href="#info">Info</a></li>
+				<li><a href="#score">Score</a></li>
+				<li><a href="#qr">QR</a></li>
 			</ul>
 		</div>
 			
