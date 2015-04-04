@@ -28,50 +28,143 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
 		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
+        <title>Fidi 47</title>
     </head>
     <body>
 	
+	
 		<div data-role="page" id="main">
-			<div data-role="content">
-				<p>Main</p>
+			<div data-role="content" class="content">
+				<a class="main-fizilendas" href="#map"><img src="img/fizilendas.png"></a>
+				<a class="main-eisena" href="#eisena"><img src="img/eisena.png"></a>
+				<a class="main-vakarine" href="#vakarine"><img src="img/vakarine.png"></a>
+			</div>
+		</div>
+		
+		<div data-role="page" id="eisena">
+			<div data-role="content" class="content">
+				<img src="img/eisena2.png">
+			</div>
+		</div>
+		
+		<div data-role="page" id="vakarine">
+			<div data-role="content" class="content">
+				<img src="img/vakarine2.png">
+			</div>
+		</div>
+		
+		<div data-role="page" id="login">
+			<div data-role="content" class="content">
+				<label>Juzerneimas</label>
+				<input type="text" id="loginUsername">
+				<label>Pasvordas</label>
+				<input type="password" id="loginPassword">
+				<button onclick="doLogin()">Davai</button>
+				<button onclick="gotoRegister()">Neturiu akaunto :(</button>
+			</div>
+		</div>
+		
+		<div data-role="page" id="register">
+			<div data-role="content" class="content">
+				<label>Juzerneimas</label>
+				<input type="text" id="registerUsername">
+				<label>Pasvordas</label>
+				<input type="password" id="registerPassword">
+				<label>Dar pasvordas</label>
+				<input type="password" id="registerPasswordRepeat">
+				<label>Vards</label>
+				<input type="text" id="firstName">
+				<label>Pavards</label>
+				<input type="text" id="lastName">
+				<button onclick="doRegister()">Regintis</button>
 			</div>
 		</div>
 		
 		<div data-role="page" id="map">
-			<div data-role="content">
-				<p onclick="$('#activity').toggle(400)">map</p>
-				<div id="activity" style="display: none; position: absolute; left: 0px; top: 0px"><p>Activity</p></div>
-				<div id="scrollmap">
-					<div id="mapimage"></div>
+			<div data-role="content" class="content">
+				<div class="scrollmap">
+					<div id="mapimage">
+						<img src="img/map.png">
+					</div>
 				</div>
+			</div>
+			<div class="mappopup" style="display: none;">
+				<img class="popupimage">
+				<h2 class="popuptitle"></h2>
+				<p class="popupdescription"></p>
+				
+				<h3>Lyderbordas</h3>
+				<table class="popupscore">
+					<thead>
+						<tr>
+							<th>Vieta</th>
+							<th>Žmogus</th>
+							<th>Skoras</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+				<button onclick="closepopup()">Atgal į mapą</button>
 			</div>
 		</div>
 		
 		<div data-role="page" id="info">
-			<div data-role="content">
+			<div data-role="content" class="content">
 				<p>info</p>
 			</div>
 		</div>
 		
 		<div data-role="page" id="score">
-			<div data-role="content">
-				<p>score</p>
+			<div data-role="content" class="content">
+				<h2>Lyderbordas</h2>
+				<table class="scoretable">
+					<thead>
+						<tr>
+							<th>Poz</th>
+							<th>Žmogus</th>
+							<th>Skoras</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
 			</div>
 		</div>
 		
 		<div data-role="page" id="qr">
-			<div data-role="content">
-				<p>qr</p>
+			<div data-role="content" class="content">
+				<img class="qrImage">
+				<br>
+				<button onclick="backtomap()">Atgal i mapa</button>
 			</div>
+		</div>
+		
+		<div data-role="page" id="sponsors">
+			<div data-role="content" class="content">
+				<img src="img/sponsors.jpg">
+			</div>
+		</div>
+		
+		<div data-role="page" id="dienine">
+			<div data-role="content" class="content">
+				<table class="dienine">
+				</table>
+			</div>
+		</div>
+		
+		<div data-role="header" id="top-bar" class="top-bar">
+			<img src="img/fidilogo.png">
+			<a href="#main"><img src="img/backbutton.png" class="backbutton"></a>
+			<a id="scoreButton" href="#score"><img src="img/leaderboards.png" class="leaderboards"></a>
 		</div>
 		
 		<div id="menu" class="menu">
 			<ul>
-				<li><a href="#map">Map</a></li>
-				<li><a href="#info">Info</a></li>
-				<li><a href="#score">Score</a></li>
-				<li><a href="#qr">QR</a></li>
+				<li><a href="#dienine">Info</a></li>
+				<li id="loginButton"><a href="#login">Login</a></li>
+				<li id="qrButton" style="display: none;"><a href="#qr">QR</a></li>
+				<li><a href="#sponsors">Rėmėjai</a></li>
 			</ul>
 		</div>
 			

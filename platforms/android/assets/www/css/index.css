@@ -167,7 +167,7 @@ h1 {
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	background-color: #11A303;
+	background-color: #1d1c24;
 	box-shadow: 0 0 5px #000;
 }
 
@@ -182,40 +182,297 @@ h1 {
 .menu ul li
 {
 	float: left;
-	width: 25%;
+	width: 33.333333%;
 }
 
 .menu ul li a
 {
 	display: block;
 	width: 100%;
-	padding-top: 50px;
+	padding: 12px 0;
 	text-align: center;
+	color: #a7a4b4;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 18px;
+	text-shadow: none;
 }
 
 .menu ul li a:hover
 {
-	background-color: #0f0;
+	background-color: #484657;
 }
 
 #mapimage
 {
-	background-image: url(../img/map.png);
-	width: 1152px;
-	height: 648px;
+	/*background-image: url(../img/map.png);*/
+	width: 620px;
+	height: 877px;
 }
 
-#scrollmap
+.scrollmap
 {
-	position: fixed;
-	overflow-x: scroll;
-	overflow-y: scroll;
-	height: 80%;
-	width: 80%;
+	/*position: fixed;*/
+	/*overflow-x: scroll;
+	overflow-y: scroll;*/
+	overflow: scroll;
+	width: 100%;
+	height: 100%;
 }
 
 #map
 {
 	height: 100%;
 	width: 100%;
+}
+
+.content
+{
+	width: 100%;
+	height: 100%;
+	margin: 52px 0 40px 0;
+	padding: 0;
+	overflow: scroll;
+}
+
+.top-bar
+{
+	background: #f2f2f7;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	box-shadow: 0 0 5px #000;
+	text-align: center;
+	z-index: 10001;
+}
+
+.top-bar img
+{
+	height: 32px;
+	margin: 8px;
+}
+
+.backbutton
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.leaderboards
+{
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+table
+{
+	width: 100%;
+}
+
+.timecell
+{
+	width: 20%;
+	text-align: center;
+	vertical-align: middle;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	padding: 16px;
+	font-size: 1.75em;
+	font-weight: bold;
+}
+
+.eventcell
+{
+	width: 80%;
+	text-align: center;
+	vertical-align: middle;
+	padding: 16px;
+	border-bottom: 1px solid #000;
+}
+
+#score h2,
+.eventcell h2
+{
+	font-size: 1.5em;
+	margin-bottom: .5em;
+}
+
+.eventcell p
+{
+	text-transform: none;
+}
+
+#dienine
+{
+	background-color: #5b52ab;
+	text-shadow: none;
+	color: #fff;
+}
+
+.scoretable,
+.dienine
+{
+	color: #fff;
+	text-shadow: none;
+	padding: 0;
+}
+
+.scoretable,
+.dienine td
+{
+	border-bottom: none;
+}
+
+.dienine .timecell
+{
+	border-right: 2px solid #938eba;
+}
+
+.scoretable tr:nth-child(odd),
+.dienine tr:nth-child(odd)
+{
+	background-color: #413d94;
+}
+
+.main-fizilendas img,
+.main-eisena img,
+.main-vakarine img
+{
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	display: block;
+}
+
+.main-fizilendas
+{
+	background-color: #c3e2f7;
+}
+
+.main-eisena
+{
+	background-color: #f6a335;
+}
+
+.main-vakarine
+{
+	background-color: #007fe5;
+}
+
+#register,
+#login
+{
+	text-transform: none;
+	padding-top: 25px;
+	text-align: center;
+}
+
+#score
+{
+	background: #5b52aa;
+	padding-top: 20px;
+	text-align: center;
+	text-shadow: none;
+	color: #fff;
+	text-transform: none;
+}
+
+.scoretable th,
+.scoretable td
+{
+	padding: 8px;
+}
+
+.scoretable th
+{
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+#qr
+{
+	text-align: center;
+}
+
+#vakarine img,
+#eisena img
+{
+	width: 100%;
+}
+
+.currentuser
+{
+	background: #FFBA0D;
+	color: #000;
+}
+
+.mappopup
+{
+	width: 80%;
+	height: 80%;
+	margin: auto;
+	background: #fff;
+	position: fixed;
+	z-index: 10000;
+	overflow-x: scroll;
+	top: 10%;
+	left: 10%;
+	text-transform: none;
+	text-align: center;
+	box-shadow: 0px 0px 10px 1px #000;
+}
+
+.popupimage
+{
+	width: 100%;
+}
+
+.popuptitle
+{
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1.2em;
+	margin: 12px;
+}
+
+.popupdescription
+{
+	margin: 12px;
+}
+
+.mapicon
+{
+	position: absolute;
+	z-index: 9000;
+}
+
+.mappopup h3
+{
+	font-weight: bold;
+	font-size: 1.2em;
+	margin-bottom: 8px;
+}
+
+.popupscore
+{
+	width: 100%;
+}
+
+.popupscore th
+{
+	font-weight: bold;
+}
+
+.popupscore tr
+{
+	border-bottom: 1px solid #000;
+}
+
+.popupscore th,
+.popupscore td
+{
+	padding: 8px;
 }
